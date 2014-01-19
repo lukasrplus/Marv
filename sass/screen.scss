@@ -1,0 +1,167 @@
+@import "library";
+@import "reset";
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500,900,900italic|Coda:400,800|Bowlby+One+SC);
+
+
+
+$text-font1: 'Coda', cursive;
+$text-font2: 'Bowlby One SC', cursive;
+$text-font3: 'Alegreya Sans SC', sans-serif;
+
+$headline-font-size: 60px;
+$text-font-size: 30px;
+// Global templates
+
+%group:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+%container {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+// Global tags
+html {
+  height: 100%;
+}
+
+body {
+    background: white;
+    height: 100%;
+}
+
+a {
+    color: #800000;
+}
+
+// Everything else
+
+section {
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
+}
+.intro {
+      background-image: url(/img/Marv5.png);
+      height: 100%;
+}
+
+.second {
+      background-image: url(/img/Marv2.jpg);
+      height: 100%;
+}
+
+.third {
+      background-image: url(/img/Marv1.jpg);
+      height: 100%;
+}
+
+.conclusion {
+      background-image: url(/img/Marv4.jpg);
+      height: 100%;
+}
+
+@mixin box-format($top: 350px, $left: 100px) {
+  position: absolute;
+  width: 500px;
+  color: #E82C0C;
+  top: $top;
+  left: $left;
+  h2 {
+    font-family: $text-font2;
+    font-size: $headline-font-size;
+  }
+  p {
+    font-family: $text-font3;
+    font-size: $text-font-size;
+  }
+}
+
+.box1 {
+  @include box-format;
+}
+
+.box2 {
+  @include box-format(200px, 75px);
+  width: 300px;
+}
+
+.box3 {
+  @include box-format(150px, 75px);
+}
+
+.box4 {
+  @include box-format(100px, 100px);
+  font-family: $text-font1;
+  input {
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  :focus {
+    outline: none;
+  }
+
+  button {
+    background-color: white;
+    font-family: $text-font1;
+    font-size: 25px;
+    border: 3px solid black;
+
+    &:hover {
+      background-color: #E82C0C;
+      color: white;
+    }
+  }
+}
+
+ul {
+  font-family: $text-font3;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .box1, .box2, .box3, .box4 {
+    position: relative;
+    left: 0px;
+    width: 100%;
+    padding-left: 20px;
+    top: 230px;
+    h2 {
+      font-size: 0.4*$headline-font-size;
+    }
+    p, ul {
+      font-size: 0.6*$text-font-size;
+    }
+  }
+  .box3, .box1 {
+    background-color: black;
+    top: 220px;
+    height: 400px;
+
+  }
+  section {
+    background-size: 100%;
+    background-attachment: scroll;
+  }
+
+  form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    button {
+      margin: 0 auto;
+      width: 90%;
+    }
+  }
+
+  input {
+    width: 90%;
+  }
+
+}

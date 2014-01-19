@@ -1,0 +1,227 @@
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500,900,900italic|Coda:400,800|Bowlby+One+SC);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: white;
+  height: 100%;
+}
+
+a {
+  color: #800000;
+}
+
+section {
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.intro {
+  background-image: url(/img/Marv5.png);
+  height: 100%;
+}
+
+.second {
+  background-image: url(/img/Marv2.jpg);
+  height: 100%;
+}
+
+.third {
+  background-image: url(/img/Marv1.jpg);
+  height: 100%;
+}
+
+.conclusion {
+  background-image: url(/img/Marv4.jpg);
+  height: 100%;
+}
+
+.box1 {
+  position: absolute;
+  width: 500px;
+  color: #E82C0C;
+  top: 350px;
+  left: 100px;
+}
+.box1 h2 {
+  font-family: "Bowlby One SC", cursive;
+  font-size: 60px;
+}
+.box1 p {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 30px;
+}
+
+.box2 {
+  position: absolute;
+  width: 500px;
+  color: #E82C0C;
+  top: 200px;
+  left: 75px;
+  width: 300px;
+}
+.box2 h2 {
+  font-family: "Bowlby One SC", cursive;
+  font-size: 60px;
+}
+.box2 p {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 30px;
+}
+
+.box3 {
+  position: absolute;
+  width: 500px;
+  color: #E82C0C;
+  top: 150px;
+  left: 75px;
+}
+.box3 h2 {
+  font-family: "Bowlby One SC", cursive;
+  font-size: 60px;
+}
+.box3 p {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 30px;
+}
+
+.box4 {
+  position: absolute;
+  width: 500px;
+  color: #E82C0C;
+  top: 100px;
+  left: 100px;
+  font-family: "Coda", cursive;
+}
+.box4 h2 {
+  font-family: "Bowlby One SC", cursive;
+  font-size: 60px;
+}
+.box4 p {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 30px;
+}
+.box4 input {
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.box4 :focus {
+  outline: none;
+}
+.box4 button {
+  background-color: white;
+  font-family: "Coda", cursive;
+  font-size: 25px;
+  border: 3px solid black;
+}
+.box4 button:hover {
+  background-color: #E82C0C;
+  color: white;
+}
+
+ul {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .box1, .box2, .box3, .box4 {
+    position: relative;
+    left: 0px;
+    width: 100%;
+    padding-left: 20px;
+    top: 230px;
+  }
+  .box1 h2, .box2 h2, .box3 h2, .box4 h2 {
+    font-size: 24px;
+  }
+  .box1 p, .box1 ul, .box2 p, .box2 ul, .box3 p, .box3 ul, .box4 p, .box4 ul {
+    font-size: 18px;
+  }
+
+  .box3, .box1 {
+    background-color: black;
+    top: 220px;
+    height: 400px;
+  }
+
+  section {
+    background-size: 100%;
+    background-attachment: scroll;
+  }
+
+  form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  form button {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  input {
+    width: 90%;
+  }
+}
